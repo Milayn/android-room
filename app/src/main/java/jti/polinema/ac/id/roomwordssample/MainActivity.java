@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,7 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
 
@@ -35,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+
         mWordViewModel.getAllWords().observe(this, new Observer<List<Word>>() {
             @Override
             public void onChanged(@Nullable final List<Word> words) {
+                // Update the cached copy of the words in the adapter.
                 adapter.setWords(words);
             }
         });

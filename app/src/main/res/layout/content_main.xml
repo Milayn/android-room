@@ -16,5 +16,4 @@
         android:layout_margin="16dp"
         tools:listitem="@layout/recylerview_item"
         tools:ignore="MissingConstraints" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

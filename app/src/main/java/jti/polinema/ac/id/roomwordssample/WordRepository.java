@@ -1,8 +1,10 @@
 package jti.polinema.ac.id.roomwordssample;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+
 import android.os.AsyncTask;
+
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
@@ -36,9 +38,6 @@ public class WordRepository {
         protected Void doInBackground(final Word... params) {
             mAsyncTaskDao.insert(params[0]);
             return null;
-        }
-
-        public void execute(Word word) {
         }
     }
 }

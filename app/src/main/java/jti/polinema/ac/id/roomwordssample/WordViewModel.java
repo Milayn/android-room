@@ -1,9 +1,8 @@
 package jti.polinema.ac.id.roomwordssample;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
-
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
